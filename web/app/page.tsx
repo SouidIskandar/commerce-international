@@ -1,22 +1,19 @@
-import Navbar from "@/app/components/Navbar";
-import Hero from "@/app/components/Hero";
-import Features from "@/app/components/Features";
-import ProductsSection from "@/app/components/ProductsSection";
-import Testimonials from "@/app/components/Testimonials";
-import Newsletter from "@/app/components/Newsletter";
-import Footer from "@/app/components/Footer";
+// app/page.tsx
+import { HeroSection } from '@/app/components/sections/HeroSection'
+import { AboutSection } from '@/app/components/sections/AboutSection'
+import { ProductsSection } from '@/app/components/sections/ProductsSection'
+import { ServicesSection } from '@/app/components/sections/ServicesSection'
+import { ContactSection } from '@/app/components/sections/ContactSection'
+
 
 export default function Home() {
   return (
-    <>
- 
-      <Navbar />
-      <Hero />
-      <Features />
+    <main className="overflow-hidden">
+      <HeroSection />
+      <AboutSection />
       <ProductsSection />
-      <Testimonials />
-      <Newsletter />
-      <Footer />
-    </>
-  );
+      <ServicesSection />
+      <ContactSection />
+    </main>
+  )
 }

@@ -1,9 +1,13 @@
-import type { Metadata } from "next";
-import "./globals.css";
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
+import './globals.css';
+import { SimpleLayout } from './components/SimpleLayout';
+
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: "Global Trade | Premium Mediterranean Goods",
-  description: "Exporting the finest olive oil, sheep wool and handicrafts worldwide",
+  title: 'Commerce International',
+  description: 'Your trusted partner in international commerce',
 };
 
 export default function RootLayout({
@@ -13,8 +17,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-white text-gray-900">
-        {children}
+      <body className={inter.className}>
+        <SimpleLayout>
+          {children}
+        </SimpleLayout>
       </body>
     </html>
   );
